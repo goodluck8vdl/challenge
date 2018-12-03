@@ -18,19 +18,7 @@ export class LessonsService {
     constructor(private http:HttpClient) {}
  
     getLessons(){  
-        
         return this.http.get<Lessons[]>(this._url)
-        
-        // return this.http.get(this._url).map((res: any) =>{
-        //     let lessons = res.json();
-        // })
-        // .catch((error:any) => {
-        //     return Observable.throw(error);
-        //   });
-        // return this.http.get(this.url).map((resp: Response) => resp.json());
-        // return this.http.get(this.url).subscribe(result => {
-        //     this.apps = result.json() as Lessons[];
-        // }, error => console.error(error));
     }
 
 }
